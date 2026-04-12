@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pavlovic Bau</title>
+  <style>
+    body { margin: 0; font-family: Arial, sans-serif; line-height: 1.6; scroll-behavior: smooth; }
+
+    header {
+      background: linear-gradient(90deg, #8b0000, #b30000);
+      color: #fff;
+      padding: 2rem 0;
+      text-align: center;
+      animation: fadeIn 1s ease-in;
+    }
+
+    nav { background: #222; display: flex; justify-content: center; position: sticky; top: 0; }
+    nav a {
+      color: #fff;
+      padding: 1rem;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+    nav a:hover { background: #8b0000; transform: scale(1.1); }
+
+    section { padding: 3rem 2rem; max-width: 1100px; margin: auto; }
+
+    .hero {
+      background: url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=1400') center/cover no-repeat;
+      color: white;
+      text-align: center;
+      padding: 6rem 1rem;
+      animation: fadeIn 2s ease-in;
+    }
+
+    .services {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .card {
+      background: #f4f4f4;
+      padding: 1.5rem;
+      border-radius: 15px;
+      transition: 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-10px) scale(1.03);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1rem;
+    }
+
+    .gallery img {
+      width: 100%;
+      border-radius: 15px;
+      transition: 0.4s;
+    }
+
+    .gallery img:hover {
+      transform: scale(1.08);
+    }
+
+    footer {
+      background: #222;
+      color: #fff;
+      text-align: center;
+      padding: 1.5rem;
+    }
+
+    .whatsapp {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: #25D366;
+      color: white;
+      padding: 15px;
+      border-radius: 50%;
+      text-decoration: none;
+      font-size: 22px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+      transition: 0.3s;
+    }
+
+    .whatsapp:hover { transform: scale(1.2); }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Pavlovic Bau</h1>
+  <p>Josip Pavlovic</p>
+</header>
+
+<nav>
+  <a href="#about">Über uns</a>
+  <a href="#services">Leistungen</a>
+  <a href="#gallery">Bilder</a>
+  <a href="#contact">Kontakt</a>
+</nav>
+
+<section class="hero">
+  <h2>Ihr Profi für Trockenbau & Renovierungen</h2>
+  <p>Saubere Arbeit • Faire Preise • Schnelle Umsetzung</p>
+</section>
+
+<section id="about">
+  <h2>Über uns</h2>
+  <p>Pavlovic Bau steht für Qualität und Zuverlässigkeit. Wir bieten professionelle Lösungen im Bereich Innenausbau und Renovierung – alles aus einer Hand.
+  wir werden sie nie für einen job ablehnen sobald er gut bezahlt ist.</p>
+</section>
+
+<section id="services">
+  <h2>Unsere Leistungen</h2>
+  <div class="services">
+    <div class="card"><h3>Trockenbau</h3><p>Wände & Deckenbau</p></div>
+    <div class="card"><h3>Innenausbau</h3><p>Individuelle Gestaltung</p></div>
+    <div class="card"><h3>Renovierungen</h3><p>Komplettsanierungen</p></div>
+    <div class="card"><h3>Spachtelarbeiten</h3><p>Perfekte glatte Oberflächen</p></div>
+  </div>
+</section>
+
+<section id="gallery">
+  <h2>Unsere Arbeit</h2>
+  <div class="gallery">
+    <img src="images/baustelle1.jpg">
+    <img src="images/baustelle2.jpg">
+  </div>
+</section>
+
+<section id="contact">
+  <h2>Kontakt</h2>
+  <p><strong>Adresse:</strong> Am Kalbskopf 1, 63263 Neu-Isenburg</p>
+  <p><strong>Email:</strong> josippavlovic888@gmail.com</p>
+  <p><strong>Telefon:</strong> 0176 840 36462</p>
+
+  <h3>Schreib uns direkt</h3>
+  <form action="mailto:josippavlovic888@gmail.com" method="POST" enctype="text/plain">
+    <input type="text" name="name" placeholder="Dein Name" required style="width:100%;padding:10px;margin:5px 0;border-radius:8px;border:1px solid #ccc;">
+    <input type="email" name="email" placeholder="Deine Email" required style="width:100%;padding:10px;margin:5px 0;border-radius:8px;border:1px solid #ccc;">
+    <textarea name="message" placeholder="Deine Nachricht" required style="width:100%;padding:10px;margin:5px 0;border-radius:8px;border:1px solid #ccc;height:120px;"></textarea>
+    <button type="submit" style="background:#8b0000;color:white;padding:12px 20px;border:none;border-radius:8px;cursor:pointer;transition:0.3s;">Nachricht senden</button>
+  </form>
+
+  <iframe src="https://maps.google.com/maps?q=Am%20Kalbskopf%201%2063263%20Neu-Isenburg&t=&z=13&ie=UTF8&iwloc=&output=embed" width="100%" height="300" style="border:0;margin-top:20px;"></iframe>
+</section>
+
+<a class="whatsapp" href="https://wa.me/4917684036462" target="_blank">💬</a>
+
+<footer>
+  <p>&copy; 2026 Pavlovic Bau</p>
+</footer>
+
+</body>
+</html>
